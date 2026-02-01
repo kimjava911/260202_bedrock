@@ -1,5 +1,13 @@
 spring:
   application:
     name: bedrock
+  ai:
+    bedrock:
+      aws:
+        region: ap-northeast-2
   profiles:
     active: dev
+
+logging:
+  level:
+    org.springframework.ai.bedrock.converse: ERROR
