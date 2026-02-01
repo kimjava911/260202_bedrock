@@ -1,0 +1,18 @@
+spring:
+  ai:
+    bedrock:
+      aws:
+        region: ap-northeast-2
+        # https://us-east-1.console.aws.amazon.com/iam/home?region=ap-northeast-2#/users
+        # invokeModel -> AmazonBedrockLimitedAccess
+        access-key:
+        secret-key:
+      converse:
+        chat:
+          options:
+#            model: anthropic.claude-3-haiku-20240307-v1:0
+            # 교차 리전 추론 프로필(Cross-region Inference Profile) ID를 사용
+#            model: apac.anthropic.claude-3-haiku-20240307-v1:0
+            model: apac.amazon.nova-lite-v1:0
+            temperature: 0.8
+            max-tokens: 1000
